@@ -15,7 +15,7 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="clearfix">
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-night.png"
+              src={props.data.icon}
               alt="sunny icon"
               className="float-left pb-4 pe-2"
             />
@@ -27,7 +27,7 @@ export default function WeatherInfo(props) {
           </div>
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="extras">
             <li>Feels Like {Math.round(props.data.feels_like)}°F</li>
             <li>Humidity {props.data.humidity}%</li>
             <li>Wind {Math.round(props.data.wind)}mph</li>
